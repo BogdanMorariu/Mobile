@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pharmacy</string>
+    <string name="list_of_medicines">List of Medicines</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="medicine_producer">Medicine Producer</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="order_medicine">Order Medicine</string>
+</resources>
