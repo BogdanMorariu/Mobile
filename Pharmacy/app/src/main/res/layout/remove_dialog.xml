@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/are_you_sure_delete"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/removeOkButton"
+            android:layout_width="99dp"
+            android:layout_height="56dp"
+            android:text="@string/delete"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="71dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/removeCancelButton"
+            android:layout_width="96dp"
+            android:layout_height="53dp"
+            android:text="@string/cancel"
+            tools:layout_editor_absoluteX="272dp"
+            tools:layout_editor_absoluteY="71dp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+</LinearLayout>

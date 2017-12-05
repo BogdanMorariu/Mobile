@@ -16,9 +16,9 @@
         android:textSize="26sp"/>
 
     <ListView
+        android:id = "@+id/medicineListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id = "@+id/medicineListView"
         android:dividerHeight="5dp">
     </ListView>
 
@@ -27,6 +27,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/order_medicine"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/addMedicineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_medicine"
         android:textAllCaps="false"
         />
 

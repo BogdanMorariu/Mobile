@@ -1,5 +1,9 @@
 package com.pf.bogdan.pharmacy.repository;
 
+import android.arch.persistence.room.Room;
+import android.content.Context;
+
+import com.pf.bogdan.pharmacy.DataBaseConnection;
 import com.pf.bogdan.pharmacy.model.Medicine;
 
 import java.io.Serializable;
@@ -10,12 +14,13 @@ import java.util.List;
  * Created by Bogdan on 07.11.2017.
  */
 
-public class MedicineRepository implements Serializable{
-    private List<Medicine> medicines;
+public class MedicineRepository{
+    private final DataBaseConnection con;
 
-    public MedicineRepository() {
-        medicines = new ArrayList<>();
-        populateRepository();
+    public MedicineRepository(Context context) {
+        con = Room.databaseBuilder(context, DataBaseConnection.class, "pharmacy-database")
+                .allowMainThreadQueries().build();
+        //populateRepository();
     }
 
     private void populateRepository(){
@@ -24,47 +29,47 @@ public class MedicineRepository implements Serializable{
         Medicine medicine3 = new Medicine(3,"Coldrex","Flu Helper","Mararam",9.00);
         Medicine medicine4 = new Medicine(4,"C Vitamin","Imunity Help","Laro Pharm",2.50);
         Medicine medicine5 = new Medicine(5,"Strepsils","Neck Aches","Omega Pharma",5.00);
-        medicines.add(medicine1);
+        con.medicineDAO().deleteAll();
+        con.medicineDAO().insert(medicine1);
+        con.medicineDAO().insert(medicine2);
+        con.medicineDAO().insert(medicine3);
+        con.medicineDAO().insert(medicine4);
+        con.medicineDAO().insert(medicine5);
+
+        /*medicines.add(medicine1);
         medicines.add(medicine2);
         medicines.add(medicine3);
         medicines.add(medicine4);
-        medicines.add(medicine5);
+        medicines.add(medicine5);*/
     }
 
-    public int findOneById(Integer id){
-        for(int i=0; i< medicines.size();i++)
-            if(medicines.get(i).getId().equals(id))
-                return i;
-        return -1;
-    }
-
-    public int findOneByName(String name){
-        for(int i=0; i< medicines.size();i++)
-            if(medicines.get(i).getName().equals(name))
-                return i;
-        return -1;
+    public Medicine findOneById(Integer id){
+        return con.medicineDAO().findById(id);
     }
 
     public void add(Medicine medicine){
-        medicines.add(medicine);
+        con.medicineDAO().insert(medicine);
     }
 
-    public void remove(Medicine medicine){
-        medicines.remove(medicine);
-    }
+    /*public void add(String name, String description, String producer, Double price){
+        Medicine medicine = new Medicine();
+        medicine.setName(name);
+        medicine.setDescription(description);
+        medicine.setProducer(producer);
+        medicine.setPrice(price);
+        con.medicineDAO().insert(medicine);
+    }*/
 
-    public void update(String name, String description,String producer, Double price){
-        int index = findOneByName(name);
-        medicines.get(index).setDescription(description);
-        medicines.get(index).setProducer(producer);
-        medicines.get(index).setPrice(price);
+    public void update(Medicine medicine){
+        con.medicineDAO().update(medicine);
     }
 
     public List<Medicine> getMedicines() {
-        return medicines;
+        return con.medicineDAO().getAll();
     }
 
-    public void setMedicines(List<Medicine> medicines) {
-        this.medicines = medicines;
+    public void remove(Medicine medicine){
+        con.medicineDAO().delete(medicine);
     }
+
 }

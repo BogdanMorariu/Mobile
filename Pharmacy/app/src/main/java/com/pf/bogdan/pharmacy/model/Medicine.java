@@ -1,19 +1,35 @@
 package com.pf.bogdan.pharmacy.model;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.Relation;
+
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Bogdan on 07.11.2017.
  */
 
+@Entity(tableName = Medicine.TABLE_NAME)
 public class Medicine implements Serializable{
-    Integer id;
-    String name;
-    String description;
-    String producer;
-    Double price;
+
+    static final String TABLE_NAME = "medicine";
+
+    @PrimaryKey(autoGenerate = true)
+    private Integer id;
+    private String name;
+    private String description;
+    private String producer;
+    private Double price;
+    private String history;
 
     public Medicine() {
+        price = 0.0;
+        history="0.0";
     }
 
     public Medicine(Integer id, String name, String description, String producer, Double price) {
@@ -22,6 +38,19 @@ public class Medicine implements Serializable{
         this.description = description;
         this.producer = producer;
         this.price = price;
+        this.history = price.toString();
+    }
+
+    public void setData(Medicine medicine){
+        name = medicine.getName();
+        description = medicine.getDescription();
+        producer = medicine.getProducer();
+        price = medicine.getPrice();
+        history=medicine.getPrice().toString();
+    }
+
+    public boolean isEmpty(){
+        return name==null && description==null && producer==null;
     }
 
     public Integer getId() {
@@ -61,7 +90,25 @@ public class Medicine implements Serializable{
     }
 
     public void setPrice(Double price) {
+        if(!this.price.equals(price))
+            history+=";"+price.toString();
         this.price = price;
+    }
+
+    public List<Double> getPrices() {
+        List<Double> result = new ArrayList<>();
+        String[] tokens = history.split(";");
+        for(String token : tokens)
+            result.add(Double.parseDouble(token));
+        return result;
+    }
+
+    public String getHistory() {
+        return history;
+    }
+
+    public void setHistory(String history) {
+        this.history = history;
     }
 
     @Override

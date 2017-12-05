@@ -73,4 +73,9 @@ public class MedicineListAdapter extends ArrayAdapter<Medicine> {
         return view;
     }
 
+    public void updateListView(List<Medicine> medicines){
+        this.medicines = medicines;
+        this.notifyDataSetChanged();
+    }
+
 }

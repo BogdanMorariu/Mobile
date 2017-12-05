@@ -6,35 +6,57 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.pf.bogdan.pharmacy.MedicineDetailsActivity">
-    <TextView
-        android:id="@+id/medicineName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="8dp"
-        android:textSize="20sp"
-        />
-    <EditText
-        android:id="@+id/medicineDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="8dp"
-        />
-    <EditText
-        android:id="@+id/medicineProducer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="8dp"
-        />
-    <EditText
-        android:id="@+id/medicinePrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="8dp"
-        />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/medicineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:hint="@string/medicine_name"
+            android:textSize="20sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/medicineDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/medicine_description"
+            android:layout_margin="8dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/medicineProducer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/medicine_producer"
+            android:layout_margin="8dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/medicinePrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/medicine_price"
+            android:layout_margin="8dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
     <Button
         android:id = "@+id/saveDetailsButton"
         android:layout_width="wrap_content"
@@ -42,5 +64,11 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/save_changes"
         android:onClick="save"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/medicineChart"
+        android:layout_width="match_parent"
+        android:layout_height="219dp">
+    </com.github.mikephil.charting.charts.LineChart>
 
 </LinearLayout>
