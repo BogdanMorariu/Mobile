@@ -33,6 +33,12 @@
         android:layout_margin="8dp"
         android:textSize="14sp" />
 
+    <NumberPicker
+        android:id="@+id/quantityPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </NumberPicker>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
