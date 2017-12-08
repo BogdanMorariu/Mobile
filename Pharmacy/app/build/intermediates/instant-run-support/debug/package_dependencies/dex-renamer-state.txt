@@ -1,0 +1,4 @@
+#Tue Dec 05 19:17:19 EET 2017
+base.0=D\:\\Scoala\\Anul-3\\Mobile\\Pharmacy\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+path.0=classes.dex
+renamed.0=classes.dex

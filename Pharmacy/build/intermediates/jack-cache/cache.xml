@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\979ad19ad3a5a1639c10c6c40b4f0d175e11c81a\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-759bba3aed60f5ebe32752a445f7f3603e007470.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        revision="26.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.3.1-cb427744cff6b7899da5aff495e03d34321095eb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\3777680034b1769792f7a112169b8ec8c2f5a715\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f267347fea6d23b149a902c54fc8cdc1b24c2957.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\eb5304aeb9e079f14c231d62ea0ce20adf8ccd1e\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-eac6daf665a83f9c1a7561722d7af68d55bbf3d7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\f15dc86bbd46ee377369e0aa0b2cdb009fdb1922\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2dd05a3210457bcf00436195729e5da74553f17d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\8b9bf42778ce5d8b4f27245f55e3924e9cb7289a\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-99473992db21468f036d93d66333309f3b41e7c0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\AppData\Local\Android\Sdk\platforms\android-25\android.jar"
+        revision="26.0.2"
+        sha1="712a0312fe844a21a1b3812fa960c363a1578984">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-83788b7f0afa251b76939749220441b41266354a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\AppData\Local\Android\Sdk\platforms\android-25\optional\org.apache.http.legacy.jar"
+        revision="26.0.2"
+        sha1="5f0541a4298daa0590b22cfbde43f85e2a675545">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-6def442ce08e23534252cdf0bc327623c4cb3e61.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\e0319fb0c84c619fa1861fc60e7fdbc76d43d372\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-657b86d0b29acd32f054ba4ea33b461b4a0ab10c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\40a19b86a8e58323a09ed5a1e8ed194163aa00b3\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-9ab56e46817ccc49d2e4f8592a9d48433c44ba10.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\88ef743f206339966969acb46aeb0a116ed7f6a7\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-e8d779f1383e0194c3b5338beb44ef83d0956a6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.0.2-6064f4a1207d66e6f08fafa8e5b225dc5b81cfb5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\a84bab871590744f3b737788b384e8a139aa4d47\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-4336d69ba4e1504cb458a36e1c7043170b6ea80c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bogdan\.android\build-cache\4ca23e30a2a85a30aefb0d5124c461c55620a7a2\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\Scoala\Anul-3\Mobile\Pharmacy\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a205a9ddd4411a1a2639fbbb6da6927318adf6f2.jar" />
+    </item>
+
+</items>
