@@ -87,7 +87,7 @@ export class MedicineDetails extends React.Component{
         (
             <View>
                 <Text>
-                    Quantity:
+                    Price:
                 </Text>
                 <TextInput
                     value={this.state.price}

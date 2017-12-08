@@ -45,8 +45,6 @@ export async function update(item){
     medicine.description = item.description;
     medicine.priceHistory = item.priceHistory;
 
-    console.log(medicine);
-
     await AsyncStorage.setItem('medicineList', JSON.stringify(medicineList));
 
     response = await AsyncStorage.getItem('medicineList'); 
