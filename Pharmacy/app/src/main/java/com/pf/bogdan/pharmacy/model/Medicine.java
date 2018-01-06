@@ -1,11 +1,5 @@
 package com.pf.bogdan.pharmacy.model;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Ignore;
-import android.arch.persistence.room.PrimaryKey;
-import android.arch.persistence.room.Relation;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +8,8 @@ import java.util.List;
  * Created by Bogdan on 07.11.2017.
  */
 
-@Entity(tableName = Medicine.TABLE_NAME)
 public class Medicine implements Serializable{
 
-    static final String TABLE_NAME = "medicine";
-
-    @PrimaryKey(autoGenerate = true)
     private Integer id;
     private String name;
     private String description;
@@ -49,7 +39,7 @@ public class Medicine implements Serializable{
         history=medicine.getPrice().toString();
     }
 
-    public boolean isEmpty(){
+    public boolean empty(){
         return name==null && description==null && producer==null;
     }
 
@@ -95,7 +85,7 @@ public class Medicine implements Serializable{
         this.price = price;
     }
 
-    public List<Double> getPrices() {
+    public List<Double> allPrices() {
         List<Double> result = new ArrayList<>();
         String[] tokens = history.split(";");
         for(String token : tokens)

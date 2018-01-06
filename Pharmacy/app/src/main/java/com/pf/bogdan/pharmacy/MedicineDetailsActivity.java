@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
@@ -28,7 +27,7 @@ public class MedicineDetailsActivity extends AppCompatActivity {
         medicine = (Medicine) getIntent().getSerializableExtra("medicine");
 
         displayDetails(medicine);
-        if(!medicine.isEmpty())
+        if(!medicine.empty())
             createChart();
     }
 
@@ -53,7 +52,7 @@ public class MedicineDetailsActivity extends AppCompatActivity {
         chart.setDescription(description);
 
         int x = 0;
-        List<Double> data = medicine.getPrices();
+        List<Double> data = medicine.allPrices();
         List<Entry> entries = new ArrayList<>();
         for(Double p : data)
             entries.add(new Entry(x++,p.floatValue()));

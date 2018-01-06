@@ -20,11 +20,13 @@ import java.util.List;
 public class MedicineListAdapter extends ArrayAdapter<Medicine> {
 
     private Activity activity;
+    private int resource;
     private List<Medicine> medicines;
     private static LayoutInflater inflater = null;
 
     public MedicineListAdapter(Activity activity, int resource, List<Medicine> medicineList){
         super(activity,resource,medicineList);
+        this.resource = resource;
         try{
             this.activity = activity;
             this.medicines = medicineList;
@@ -55,11 +57,11 @@ public class MedicineListAdapter extends ArrayAdapter<Medicine> {
         final ViewHolder holder;
         try{
             if(convertView == null) {
-                view = inflater.inflate(R.layout.medicine_list_item, null);
+                view = inflater.inflate(resource, null);
                 holder = new ViewHolder();
 
-                holder.display_name = (TextView) view.findViewById(R.id.medicineName);
-                holder.display_price = (TextView) view.findViewById(R.id.medicinePrice);
+                holder.display_name = view.findViewById(R.id.medicineName);
+                holder.display_price = view.findViewById(R.id.medicinePrice);
 
                 view.setTag(holder);
             }else
