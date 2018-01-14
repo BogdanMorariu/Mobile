@@ -22,9 +22,9 @@ export class MedicineDetails extends React.Component{
             description: item.description,
             updateFunction: this.props.navigation.state.params.updateFunction,
             isEdit: this.props.navigation.state.params.isEdit,
-            priceHistory: item.priceHistory,
+            priceHistory: item.history,
             quantity: "0",
-            price: "0"
+            price: JSON.stringify(item.price)
         };
     }
 
@@ -34,27 +34,41 @@ export class MedicineDetails extends React.Component{
             name: this.state.name,
             producer: this.state.producer,
             description: this.state.description,
-            priceHistory: this.state.priceHistory
+            history: this.state.priceHistory,
+            price: parseFloat(this.state.price)
         };
 
         if (this.state.isEdit){
-            const price = parseInt(this.state.price);
-            item.priceHistory.push(price);
+            item.history = item.history.concat(';' + this.state.price);
+        } else {
+            item.history = this.state.price;
         }
 
-        this.state.updateFunction(item);
-
-        if(!this.state.isEdit) {
+        if(!this.state.updateFunction) {
             Communications.email(["tipitza@gmail.com"], null, null, 'Order for medicine', this.state.name + ' was ordered in a quantity of ' + this.state.quantity);
         }
+        else {
+            this.state.updateFunction(item);
+        }
+
         const {navigate} = this.props.navigation;
-        navigate('Main');
+        navigate('List');
     };
 
-    render(){
-        const buttonTitle = this.state.isEdit ? "Save" : "Order medicine";
+    formatHistory(history) {
+        let result = history.split(';');
+        if (result.length === 0) 
+            result = [0];
+        else
+            result = result.map(h => parseFloat(h));
+        console.log(result);
+        return result;
+	}
 
-        const picker = !this.state.isEdit &&  
+    render(){
+        const buttonTitle = this.state.updateFunction ? "Save" : "Order medicine";
+
+        const picker = !this.state.updateFunction &&  
         (
         <View style={{marginTop: 30}}>
             <Text>
@@ -74,16 +88,20 @@ export class MedicineDetails extends React.Component{
             </Picker>
         </View>);
 
+console.log("before chart");
         const chart = this.state.isEdit && 
         (
         <View>
             <Text>
                 Price evolution:
             </Text>
-            <Chart prices={this.state.priceHistory}/>
+            <Chart prices={this.formatHistory(this.state.priceHistory)}/>
         </View>
         );
-        const priceInput = this.state.isEdit && 
+
+        console.log("after chart");
+
+        const priceInput = this.state.updateFunction && 
         (
             <View>
                 <Text>
@@ -95,6 +113,7 @@ export class MedicineDetails extends React.Component{
                 />
             </View>);
 
+console.log("after price");
         return(
             <View>
                 <Text>

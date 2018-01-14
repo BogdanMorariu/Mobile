@@ -9,8 +9,10 @@ export class Chart extends React.Component {
     }
 
 render() {
+    if (this.props.prices.length === 0){
+      return (<Text>No pricing history</Text>);
+    }
 
-    console.log(this.props);
     let chartData = this.props.prices.map(price => {
         return {
             "v" : price,
